@@ -207,8 +207,7 @@ function Footer() {
           </Link>
           <p className="mt-6 max-w-xs text-sm leading-7 text-[#b9c5bd]">Legal advocacy and human-rights work with poor communities, women, children, and vulnerable groups throughout Nusa Tenggara Timur.</p>
           <div className="mt-6 flex gap-3 text-[#f5c7a5]">
- <div className="mt-6 flex gap-3 text-[#f5c7a5]">
-  <a
+   <a
     href="https://www.facebook.com/profile.php?id=100085286101664"
     target="_blank"
     rel="noopener noreferrer"
@@ -224,6 +223,7 @@ function Footer() {
       <path d="M14 8h3V4h-3c-3.31 0-5 1.99-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.67.33-1 1-1z" />
     </svg>
   </a>
+
   <a
     href="https://www.instagram.com/ykbh_justitia/"
     target="_blank"
