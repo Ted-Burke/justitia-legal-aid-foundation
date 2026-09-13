@@ -224,7 +224,7 @@ function Footer() {
       <path d="M14 8h3V4h-3c-3.31 0-5 1.99-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.67.33-1 1-1z" />
     </svg>
   </a>
-
+ </div>
   <a
     href="https://www.instagram.com/ykbh_justitia/"
     target="_blank"
