@@ -245,6 +245,7 @@ function Footer() {
     </svg>
   </a>
 </div>
+</div>
           <div><p className="footer-heading">Explore</p><div className="grid gap-3">{[["About Justitia", "/about"], ["What we do", "/what-we-do"], ["Where we work", "/where-we-work"], ["Our impact", "/impact"]].map(([label, href]) => <Link key={href} href={href} className="footer-link">{label}</Link>)}</div></div>
         <div><p className="footer-heading">Take action</p><div className="grid gap-3">{[["Get legal help", "/legal-help"], ["Get involved", "/get-involved"], ["Donate", "/donate"], ["Resources", "/resources"]].map(([label, href]) => <Link key={href} href={href} className="footer-link">{label}</Link>)}</div></div>
         <div><p className="footer-heading">Contact</p><div className="grid gap-3 text-sm leading-6 text-[#b9c5bd]"><a href="mailto:ykbh.justitia@gmail.com" className="footer-link inline-flex items-center gap-2"><Mail className="h-4 w-4" /> ykbh.justitia@gmail.com</a><a href="tel:+6281236179074" className="footer-link inline-flex items-center gap-2"><Phone className="h-4 w-4" /> +62-812-3617-9074</a><span className="inline-flex items-start gap-2"><MapPin className="mt-1 h-4 w-4 shrink-0" />Jalan Samratulangi II, No. 33, Kec. Kelapa Lima, Kel. Kelapa Lima, Kupang, NTT, Indonesia, 85228</span></div></div>
