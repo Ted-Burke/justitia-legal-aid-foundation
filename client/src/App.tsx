@@ -12,10 +12,31 @@ import {
   WhatWeDo,
   WhereWeWork,
 } from "@/pages/Site";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
+
+function ScrollManager() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    if (hash) {
+      const id = decodeURIComponent(hash.slice(1));
+      requestAnimationFrame(() => {
+        const element = document.getElementById(id);
+        if (element) element.scrollIntoView({ behavior: "auto", block: "start" });
+      });
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }
+  }, [location]);
+
+  return null;
+}
 
 function Router() {
   return (
@@ -42,6 +63,7 @@ export default function App() {
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
         <LanguageProvider>
+          <ScrollManager />
           <Router />
         </LanguageProvider>
       </ThemeProvider>
