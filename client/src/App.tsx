@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import NotFound from "@/pages/NotFound";
 import {
   About,
@@ -13,28 +12,11 @@ import {
   WhatWeDo,
   WhereWeWork,
 } from "@/pages/Site";
-import { Route, Switch, useLocation } from "wouter";
+import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
-function ScrollToTop() {
-  const [location] = useLocation();
 
-  useEffect(() => {
-    const hash = window.location.hash;
-
-    if (hash) {
-      const element = document.getElementById(hash.slice(1));
-      if (element) {
-        element.scrollIntoView();
-        return;
-      }
-    }
-
-    window.scrollTo(0, 0);
-  }, [location]);
-
-  return null;
-}
 function Router() {
   return (
     <Switch>
@@ -59,10 +41,9 @@ export default function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
-      <>
-        <ScrollToTop />
-        <Router />
-        </>
+        <LanguageProvider>
+          <Router />
+        </LanguageProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );
