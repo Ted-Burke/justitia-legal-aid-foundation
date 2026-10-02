@@ -218,12 +218,15 @@ button:focus-visible, a:focus-visible { outline: 3px solid #f0b38f; outline-offs
   justify-content: flex-end;
   gap: 18px;
   margin-left: auto;
+  min-width: 0;
 }
 
 .site-nav > a {
   display: inline-flex;
   align-items: center;
-  white-space: nowrap;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
   color: #5c6c65;
   font-size: 13px;
   font-weight: 600;
@@ -276,7 +279,17 @@ button:focus-visible, a:focus-visible { outline: 3px solid #f0b38f; outline-offs
 
 .language-switcher {
   flex: 0 0 auto;
-  white-space: nowrap;
+  width: 132px;
+  justify-content: center;
+  white-space: normal;
+}
+
+.language-switcher button {
+  flex: 1 1 0;
+  min-width: 0;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.1;
 }
 
 /* Main Home heading */
